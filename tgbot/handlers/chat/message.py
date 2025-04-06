@@ -7,7 +7,7 @@ from tgbot.services.database.repository import Repository
 
 router = Router()
 
-@router.message(Command("/pidors"))
+@router.message(Command("pidors"))
 async def handle_users_count(message: Message, repo: Repository):
     users_count = await repo.get_banned_users_count()
 
