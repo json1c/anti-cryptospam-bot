@@ -47,7 +47,7 @@ async def main():
     dp.startup.register(on_startup)
     dp.shutdown.register(on_shutdown)
     
-    await dp.start_polling(bot, config=config)
+    await dp.start_polling(bot, config=config, allowed_updates=dp.resolve_used_update_types())
 
 
 if __name__ == "__main__":

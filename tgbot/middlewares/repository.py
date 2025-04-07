@@ -23,4 +23,4 @@ class DbRepoMiddleware(BaseMiddleware):
 
 def register_middleware(dp: Dispatcher):
     db_middleware = DbRepoMiddleware()
-    dp.message.middleware(db_middleware)
+    dp.update.middleware(db_middleware)
